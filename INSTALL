@@ -1,0 +1,74 @@
+SeekQuarry/Yioop --
+Open Source Pure PHP Search Engine, Crawler, and Indexer
+
+Copyright (C) 2009 - 2012  Chris Pollett chris@pollett.org
+
+http://www.seekquarry.com/
+
+LICENSE:
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+What follows is a brief summary of how to install Yioop!
+More details about installation and configuration (including screenshots)
+can be found at:
+http://www.seekquarry.com/?c=main&p=documentation
+
+Installation
+-------------
+(1) Move the Yioop search engine into some folder under your
+web server's document root. Yioop makes use of an auxiliary
+folder to store profile/crawl data. Before Yioop will
+run you must configure this directory. To do this
+point your web browser to the location of Yioop. A
+configuration page should appear and let you set the
+path to the auxiliary folder. For this
+step you must connect via localhost or you must have a 
+configs/local_config.php file with NO_LOCAL_CHECK defined to true. 
+Make sure the web server has permissions on the place where this auxiliary
+folder needs to be created. Once you have set the folder,
+you should see a second form beneath the select-a-path
+form. This form allows you to configure the debug settings,
+database settings, queue server and robot settings.
+After filling in this form and submitting it, 
+the installation is complete.
+
+(2) To start the queue server you type:
+
+php queue_server.php terminal
+
+from the bin folder. 
+
+(3) You need at least one fetcher running
+to download pages.To run a fetcher, simply type:
+
+php fetcher.php terminal
+
+from the bin folder.
+
+(4) To start a crawl, you need to point your browser at the url
+of your Yioop installation. Click on the admin link,
+then the manage crawl link. Type in a description of your
+crawl and click "Start New Crawl". After about a minute you should
+start the Currently Processing and Most Recent Urls sections updating
+with info about the current crawl. 
+
+(5) After running your crawl for a while you can click the Stop
+button to stop it. The crawl should show up after a delay in the
+Previous Crawls table. Their you can choose to resume a crawl,
+delete it, or set it as the current index.
+
+(6) If you set a crawl as the current index, when you go
+back to your installations web page and type a query in the search bar,
+the query will be answered with the results from that crawl.

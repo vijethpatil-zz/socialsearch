@@ -1,0 +1,4 @@
+title=Page Not Found
+description=The page you requested cannot be found on our server
+END_HEAD_VARS
+<h2>The page you requested cannot be found.</h2>

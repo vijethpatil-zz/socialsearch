@@ -1,0 +1,5 @@
+# Okay to crawl, just don't query all the indexes
+# Dumb agents that don't understand *, we hope you 
+# are too slow to bother excluding
+User-agent: *
+Disallow: /*?*q=

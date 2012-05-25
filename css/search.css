@@ -1,0 +1,1502 @@
+/** 
+ *  SeekQuarry/Yioop --
+ *  Open Source Pure PHP Search Engine, Crawler, and Indexer
+ *
+ *  Copyright (C) 2009 - 2012  Chris Pollett chris@pollett.org
+ *
+ *  LICENSE:
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *  END LICENSE
+ *
+ * @author Chris Pollett chris@pollett.org
+ * @package seek_quarry
+ * @subpackage stylesheet
+ * @license http://www.gnu.org/licenses/ GPL3
+ * @link http://www.seekquarry.com/
+ * @copyright 2009 - 2012
+ * @filesource
+ */
+ 
+ /*
+    search.css
+    
+    Main stylesheet for Yioop search engine
+    
+    Contributors: Chris Pollett
+ */ 
+
+.html-tb
+{
+    block-progression: tb;
+}
+
+.html-rl
+{
+    block-progression: rl;
+    -webkit-transform: rotate(90deg) translate(2in) ; 
+    -moz-transform: rotate(90deg) translate(2in);
+}
+
+.html-lr
+{
+    block-progression: lr;
+    -webkit-transform: rotate(90deg); 
+    -moz-transform: rotate(90deg);
+}
+
+.html-rtl
+{
+    direction: rtl;
+    text-align:right;
+}
+
+.html-ltr
+{
+    direction: ltr;
+    text-align:left;
+}
+
+body
+{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body.html-ltr
+{
+    margin-left:.5in;
+
+}
+
+body.html-rtl
+{
+    margin-right:.5in;
+}
+
+body.html-rl-tb
+{
+    writing-mode: rl-tb;
+}
+
+body.html-lr-tb
+{
+    writing-mode: lr-tb;
+}
+
+body.html-tb-rl
+{
+    writing-mode: tb-rl;
+
+}
+
+body.html-tb-lr
+{
+    writing-mode: tb-lr;
+}
+
+body.mobile
+{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    margin:0;
+    width:320px;
+}
+
+.topbar
+{
+    background: #DDD;
+    background: -moz-linear-gradient(top, #FFF 0%,#EEF 30%,#EEF 70%, #FFF 100%);
+    background: -webkit-linear-gradient(top,
+        #FFF 0%,#EEF 30%,#EEF 70%, #FFF 100%);
+    background: linear-gradient(top, #FFF 0%,#EEF 30%,#EEF 70%, #FFF 100%);
+    position:absolute;
+    top:-12px;
+    left:0;
+    right:0;
+    width:100%;
+    height:45px;
+}
+
+.mobile .topbar
+{
+    background: #DDD;
+    background: -moz-linear-gradient(top, #FFF 0%,#EEF 30%,#EEF 70%, #FFF 100%);
+    background: -webkit-linear-gradient(top, 
+        #FFF 0%,#EEF 30%,#EEF 70%, #FFF 100%);
+    background: linear-gradient(top, #FFF 0%,#EEF 30%,#EEF 70%, #FFF 100%);
+    position:absolute;
+    top:-5px;
+    left:0px;
+    right:0px;
+    width:330px;
+    height:30px;
+}
+
+#message
+{
+    z-index:3;
+    text-align: center;
+    position: absolute;
+    top: .1in;
+    width: 100%;
+}
+
+.mobile #message
+{
+    width:320px;
+}
+
+.html-ltr .userNav
+{
+    text-align: right;
+    margin:0 0.25in 0 0;
+    padding:0;
+    min-width: 9in;
+}
+
+.html-rtl .userNav
+{
+    text-align: left;
+    margin:0 0 0 0.25in;
+    padding:0;
+    min-width: 9in;
+}
+
+.html-ltr .userNav ul li
+{
+    display: inline;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+
+.html-rtl .userNav ul li
+{
+    display:inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
+
+
+.mobile .userNav
+{
+    position:absolute;
+    font-size:11pt;
+    top: -10px;
+    left:0px;
+    right:0px;
+    width:320px;
+    padding: 0px;
+    min-width: 0;
+}
+
+.mobile .userNav ul li
+{
+    padding:1px;
+}
+
+.html-ltr .subsearch ul li
+{
+    float:left;
+    display: inline;
+    list-style-type: none;
+    padding-left: 20px; 
+}
+
+
+.html-rtl .subsearch ul li
+{
+    float:right;
+    display: inline;
+    list-style-type: none;
+    padding-left: 20px; 
+}
+
+.mobile .subsearch
+{
+    z-index:1;
+    position: relative;
+    top: -12px;
+    left:-40px;
+    right:-40px;
+    padding:0px;
+}
+
+.mobile .subsearch ul li
+{
+    font-size:11pt;
+    padding-left:3px;
+    padding-right:3px;
+}
+.landing-spacer 
+{
+    height:6in;
+}
+
+.html-ltr .landing
+{
+    position:absolute;
+    top:1.5in;
+    left:12%;
+    min-width:6in;
+    clear: both;
+}
+
+.html-rtl .landing
+{
+    position:absolute;
+    top:1.5in;
+    right:12%;
+    min-width:6in;
+}
+
+.mobile .landing
+{
+    position:relative;
+    top:10px;
+    left:10px;
+    right:10px;
+    min-width:0;
+    clear: both;
+}
+
+.mobile .non-search
+{
+    position:relative;
+    top:20px;
+    left:0px;
+    right:0px;
+}
+
+.mobile .center
+{
+    position:relative;
+    top:10px;
+    left:-40px;
+    right:-40px;
+}
+
+.logo
+{
+    position:relative;
+    top:14pt;
+    margin:0;
+
+}
+
+.admin-heading
+{
+    position:relative;
+    top: 30px;
+}
+
+.mobile .admin-heading
+{
+    position:absolute;
+    top: 20px;
+}
+
+
+.landing .logo
+{
+    position:relative;
+    top:0;
+    text-align:center;
+    min-width: 8in;
+}
+
+.mobile .landing .logo
+{
+    min-width: 0px;
+}
+
+.logo img
+{
+    border: 0;
+    width:2in;
+}
+
+.mobile .logo img
+{
+    position:relative;
+    top: 15px;
+    left:0px;
+    width: 50px;
+}
+
+.landing .logo img
+{
+    border: 0;
+    width:3in;
+}
+
+.mobile .landing .logo img
+{
+    position:relative;
+    top: 14px;
+    left:0px;
+    width: 200px;
+}
+
+
+.mobile .admin-heading img
+{
+    position:relative;
+    top: 30px;
+    left:80px;
+    right:80px
+    width: 50px;
+}
+
+.logo span
+{
+    position:relative;
+    top: -.3in;
+}
+
+
+.mobile .admin-heading span
+{
+    position:relative;
+    top: 20px;
+    left:70px;
+    right:70px;
+}
+
+.html-ltr .login, .html-ltr .settings
+{
+    font-size: 16pt;
+    position:relative;
+    left:2.25in;
+}
+
+.html-rtl .login, .html-rtl .settings
+{
+    font-size: 16pt;
+    position:relative;
+    right:2.25in;
+}
+
+.mobile .login, .mobile .settings, .mobile .statistics
+{
+    font-size: 14pt;
+    position: relative;
+    left: 10px;
+    right: 10px;
+}
+
+.mobile .stats  span
+{
+    position:relative;
+    top: -10px;
+    left:-10px;
+    width:200px;
+}
+
+.mobile .stats  img
+{
+    position:relative;
+    top: 0px;
+    left:0px;
+    width: 50px;
+}
+
+.mobile .non-search .logo span
+{
+    position:relative;
+    left:20px;
+    right:20px;
+    width:200px;
+}
+
+.mobile .non-search .logo img
+{
+    position:relative;
+    top: -20px;
+    left:20px;
+    right:20px;
+    width: 50px;
+}
+
+
+.mobile .table-input select
+{
+    width:190px;
+}
+
+.mobile .table-input input
+{
+    width:150px;
+}
+
+.html-ltr .table-label
+{
+    text-align: right;
+}
+.html-ltr .table-input
+{
+    text-align: left;
+}
+
+
+.html-rtl .table-label
+{
+    text-align: left;
+}
+.html-rtl .table-input
+{
+    text-align: right;
+}
+
+.login input
+{
+    margin: 5px;
+    font-size:16pt;
+}
+
+.settings button, .settings select, .login button
+{
+    font-size: 16pt;
+}
+
+.mobile .settings button, .mobile .settings select, .mobile .login button
+{
+    font-size: 14pt;
+}
+
+.content
+{
+    position:relative;
+    margin-left: .5in;
+    margin-right: .5in;
+    width:8in;
+    min-height:3in;
+    padding: 8px;
+    font-size:12pt;
+    background-color:white;
+}
+
+.mobile .content
+{
+    clear:both;
+    position:relative;
+    top:0px;
+    left:0px;
+    right:0px;
+    width:320px;
+    margin:3px;
+}
+
+.content p
+{
+    padding-bottom: 8px;
+}
+
+.html-ltr .serp
+{
+    position:relative;
+    top: -0.9in;
+    left:2.2in;
+}
+.html-ltr .serp-results
+{
+    position:relative;
+    top: -0.9in;
+    left:1in;
+	right:5in;
+	margin-right:4.6in;
+}
+
+
+.html-rtl .serp
+{
+    position:relative;
+    top: -1.15in;
+    right:2.2in;
+}
+.html-rtl .serp-results
+{
+    position:relative;
+    top: -1in;
+    right:1in;
+}
+
+.mobile .serp
+{
+    position:relative;
+    top:-70px;
+    left: 50px;
+    right:50px;
+}
+
+.mobile .serp-results
+{
+    position:relative;
+    top: -30px;
+    left: 3px;
+    right: 3px;
+}
+
+.searchbox
+{
+    position: relative;
+    top:14pt;
+    width:8in;
+    padding: 0.1in;
+    background-color: #DDF;
+    border-width: 0.05in;
+    border-color: #AAA;
+    border-style: solid;
+    border-radius: 0.07in;
+}
+
+.landing .searchbox
+{
+    position: relative;
+    top:0;
+}
+
+.mobile .searchbox
+{
+    position:relative;
+    top: 50px;
+    padding: 3px;
+    width:240px;
+}
+
+.mobile .landing .searchbox
+{
+    position:relative;
+    top: 10px;
+    width:289px;
+}
+
+.searchbox p
+{
+    font-size:16pt;
+}
+
+.searchbox input, .autoresult
+{
+    width: 6.5in;
+    font-size:16pt;
+    margin-right:0;
+    margin-left:0;
+    border:0;
+    padding-top: 0;
+    padding-bottom:0.05in;
+    padding-right:0;
+    padding-left:0;
+    margin:0;
+}
+
+.dropdown 
+{   
+    width: 6.55in;
+    margin-left:0.023in;
+    height: 1.5in;
+    border-color: #AAA;
+    border-width: 0.05in;
+    border-top-style:none;
+    border-right-style:solid;
+    border-bottom-style:solid;
+    border-left-style:solid;
+    border-bottom-right-radius: 0.05in;
+    border-bottom-left-radius: 0.05in;
+    border-top-left-radius: 0.05in;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom:0in;
+    margin-bottom:0in;
+    margin-right:0;
+    padding-top: 0.01in;
+}
+
+.mobile .dropdown
+{
+    display:none;
+}
+
+.mobile .searchbox input
+{
+    width:180px;
+    font-size:12pt;
+}
+
+.mobile .landing .searchbox input
+{
+    width:235px;
+    font-size:12pt;
+}
+
+#aslist li
+{
+    position:relative;
+    top:-0.015in;
+    background:#DDF;
+    width: 6.5in;
+    font-size:16pt;
+    margin-right:0in;
+    margin-left:0in;
+    padding-top:0;
+    padding-right:0in;
+    padding-left:0.1in;
+    cursor:pointer;
+    list-style:none;
+}
+
+#aslist li span
+{
+    width:6.5in;
+    padding:0;
+    margin:0;
+    display:block;
+}
+
+#aslist li span.unselected
+{
+    background:white;
+}
+
+#aslist li span.selected
+{
+    background:#AAE;
+    color:black;
+}
+
+.mobile #aslist
+{
+    display: none;
+}
+
+.html-ltr .buttonbox
+{
+    position:relative;
+    left:-.05in;
+    top:.015in;
+    margin-left: 0pt;
+    text-align: center;
+    text-decoration: none;
+    font-size:16pt;
+    color: black;
+}
+
+
+.html-rtl .buttonbox
+{
+    position:relative;
+    right:-.05in;
+    top:.015in;
+    margin-right: 0;
+    text-align: center;
+    text-decoration: none;
+    font-size:16pt;
+    color: black;
+}
+
+.mobile .buttonbox
+{
+    font-size:12pt;
+    margin-right: 0;
+    margin-left: 0;
+}
+.pagination
+{
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.html-ltr .pagination ul, .pagination ul li
+{
+    font-size: 20pt;
+
+    display:inline;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+.html-rtl .pagination ul, .pagination ul li
+{
+    font-size: 20pt;
+
+    display:inline;
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+.html-ltr .pagination ul li span.end
+{
+    display:block;
+    float:left;
+    margin-right: 10px;
+}
+
+.html-rtl .pagination ul li span.end
+{
+    display: block;
+    float: right;
+    margin-left: 10px;
+}
+
+.html-ltr .pagination ul li a.item
+{
+    display:block;
+    float:left;
+    width: 30px;
+    height: 30px;
+    text-align:center;
+    border-color: blue; 
+    border-style: solid;
+    border-width: 3px;
+    margin-right: 10px;
+    text-decoration:none;
+}
+
+.html-rtl .pagination ul li a.item
+{
+    display:block;
+    float:right;
+    width: 30px;
+    height: 30px;
+    text-align:center;
+    border-color: blue; 
+    border-style: solid;
+    border-width: 3px;
+    margin-left: 10px;
+    text-decoration:none;
+}
+
+.pagination ul li a.item:hover
+{
+    background-color:#88F;
+    color: white;
+}
+
+.html-ltr .pagination ul li span.item
+{
+    position: relative;
+    top: -3px;
+    display: block;
+    float:left;
+    width: 30px;
+    height: 30px;
+    text-align:center;
+    border-color: black; 
+    border-style: solid;
+    border-width: 5px;
+    margin-right: 10px;
+}
+
+.html-rtl .pagination ul li span.item
+{
+    position: relative;
+    top: -3px;
+    display: block;
+    float:right;
+    width: 30px;
+    height: 30px;
+    text-align:center;
+    border-color: black; 
+    border-style: solid;
+    border-width: 5px;
+    margin-left: 10px;
+}
+
+h2
+{
+    margin-bottom:0;
+	right:3in;
+}
+
+p
+{
+    width: 8.25in;
+    margin:0;
+    padding:0;
+}
+
+.mobile p
+{
+    width:300px;
+}
+
+.result h2
+{
+    font-weight:normal;
+    font-size:14pt;
+}
+
+.html-ltr .video-link
+{
+    padding-top: 0.05in;
+    float:left;
+    margin:0;
+    width: 128px;
+    height:80px;
+}
+
+.video-link .thumb
+{
+    width: 120px;
+    height: 80px;
+}
+.html-ltr .video-play
+{
+    position: relative;
+    left: 40px;
+    top: -60px;
+    width: 40px;
+}
+
+.html-rtl .video-link
+{
+    padding-top: 0.05in;
+    float:right;
+    margin:0;
+    width: 128px;
+    height:80px;
+}
+
+.html-rtl .video-play
+{
+    position: relative;
+    right: 40px;
+    top: -60px;
+    width: 40px;
+}
+
+.image-list
+{
+    margin-top:10px;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+.mobile .image-list
+{
+    position:relative;
+    top:15px;
+    margin-left:2px;
+    margin-right:2px;
+}
+
+
+
+.echolink
+{
+    color:green
+}
+
+.left
+{
+    float:left;
+}
+
+.right
+{
+    float:right;
+}
+
+.alignRight
+{
+    text-align:right;
+}
+
+.red
+{
+    color:red;
+}
+
+.highlight, .backred
+{
+    background-color:red;
+}
+
+.backgreen
+{
+    background-color:green;
+}
+
+.backgray
+{
+    background-color: lightgray;
+}
+
+.frame
+{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    position:relative;
+}
+
+.setting-footer, .signin-exit, .landing-footer
+{
+    margin-top: 0.25in;
+    text-align: center;
+}
+
+.mobile .landing-footer
+{
+    clear:both;
+    position: relative;
+    text-align: center;
+    margin-top:0;
+    top: 0px;
+    left:0px;
+    right:0px;
+    width:320px;
+}
+
+.mobile .setting-footer, 
+.mobile .signin-exit, 
+.mobile .landing .landing-footer
+{
+    position: relative;
+    text-align: center;
+    margin-top:0.4in;
+    top: -20px;
+    left:-20px;
+    right:-20px;
+    width:320px;
+}
+
+
+
+.html-ltr .activitymenu
+{
+    float: left;
+    position:relative;
+    top:30px;
+    width: 2.5in;
+    padding: 0;
+    border-radius: 8px;
+}
+
+.html-rtl .activitymenu
+{
+    float: right;
+    position:relative;
+    top:30px;
+    width: 2.5in;
+    padding: 0;
+    border-radius: 8px;
+}
+
+.mobile .activitymenu
+{
+    position:relative;
+    float:none;
+    top:100px;
+    width:320px;
+    border: 0;
+}
+
+.activitymenu h2
+{
+    color: #222;
+    background-color:#8A4;
+    margin: 0;
+    padding: .05in .15in .05in .15in ;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.mobile .activitymenu h2
+{
+    display:none;
+}
+
+.mobile .activitymenu select
+{
+    width:320px;
+    font-size:16pt;
+}
+
+.activitymenu li
+{
+    list-style-type:none;
+    list-style-position:inside;
+    margin: 0;
+    padding: .10in;
+}
+
+.activitymenu li.bottom_border
+{
+    border-bottom: 1px solid #ccc;
+}
+
+.activitymenu li a
+{
+    color:#222;
+    text-decoration: none;
+}
+
+.activitymenu li a:hover
+{
+    color:#222;
+    text-decoration: underline;
+}
+
+.activitymenu ul
+{
+    display: block;
+    padding: 0;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.html-ltr .currentactivity
+{
+    position: relative;
+    top:30px;
+    margin-left: 2.75in;
+    padding-left: .1in;
+    padding-right: .1in;
+    padding-bottom: .1in;
+    width: 8in;
+    min-width: 7in;
+    min-height: 6in;
+    font-size:16pt;
+    background-color: #fff;
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+}
+
+.html-rtl .currentactivity
+{
+    position: relative;
+    top:30px;
+    margin-right: 2.75in;
+    padding-right: .1in;
+    padding-left: .1in;
+    padding-bottom: .1in;
+    width: 8in;
+    min-width: 7in;
+    min-height: 6in;
+    font-size:16pt;
+    background-color: #fff;
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+}
+
+.mobile .currentactivity
+{
+    clear:both;
+    position: relative;
+    top:120px;
+    left: 5px;
+    right:5px;
+    margin:0;
+    padding:0;
+    margin-right: 3px;
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    width: 310px;
+    min-width: 0;
+    min-height: 200px;
+    font-size:12pt;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.currentactivity h2
+{
+    padding-top: .05in;
+    margin-top: .05in; 
+}
+
+.currentactivity input
+{
+    font-size: 16pt;
+    position: relative;
+    top: 2px;
+}
+
+.currentactivity object
+{
+    width: 8in;
+    min-width: 6in;
+    height:2in;
+}
+
+.currentactivity select
+{
+    font-size:16pt;
+}
+
+.mobile .currentactivity select
+{
+    font-size:12pt;
+}
+.html-ltr .roletable, .html-ltr .roletable th, .html-ltr .roletable td
+{
+    margin-left: .2in;
+    padding: 1px;
+    border: 1px solid black;
+}
+
+.html-rtl .roletable, .html-rtl .roletable th, .html-rtl .roletable td
+{
+    margin-right: .2in;
+    padding: 1px;
+    border: 1px solid black;
+}
+
+.html-ltr .localetable, .html-ltr .localetable th, .html-ltr .localetable td
+{
+    margin-left: .2in;
+    border: 1px ridge black;
+}
+
+.html-rtl .localetable, .html-rtl .localetable th, .html-rtl .localetable td
+{
+    margin-right: .2in;
+    border: 1px ridge black;
+}
+
+
+.tabmenu-list
+{
+    border-bottom: 2px solid black;
+    padding: 0px;
+    margin-bottom: 0px;
+    z-index: 1;
+}
+.tabmenu-list li
+{
+    display: inline;
+    list-style-type: none;
+}
+
+.tabmenu-list a
+{
+    border: 1px solid black;
+    border-bottom: 0px;
+    padding: 5px 5px 0px 5px;
+    background-color:#EEE;
+    overflow: hidden;
+    margin: 0;
+    text-decoration: none;
+}
+
+.tabmenu-list a.active
+{
+    background-color:white;
+    border-bottom: 3px solid white;
+}
+
+.tabmenu-content
+{
+    border: 1px solid black;
+    border-top: none;
+    padding: 10px;
+    z-index: 2;
+}
+
+.crawlstable, .mixestable, .crawlstable th, .mixestable th, 
+.crawlstable td, .mixestable td, .filetypestable
+{
+    border: 1px ridge black;
+    padding: 2px;
+}
+
+.crawlstable th,  .mixestable th, .crawlstable td, .mixestable td,
+.filetypestable td
+{
+    border: 1px ridge black;
+    padding: 2px;
+}
+
+.html-ltr .filetypestable, .html-ltr .ftypesall td
+{
+   margin-left: .3in;
+   vertical-align: top;
+}
+
+.html-rtl  .filetypestable, .html-rtl .ftypesall td
+{
+   margin-right: .3in;
+   vertical-align: top;
+}
+
+.mobile .filetypestable, .mobile .ftypesall td
+{
+   margin-left: 2px;
+   margin-right: 2px;
+   vertical-align: top;
+}
+
+.html-ltr .weightstable th 
+{
+    text-align: right;
+}
+
+.html-rtl .weightstable th 
+{
+    text-align: left;
+}
+
+.machinetable, .machinetable th, .machinetable td
+{
+    border: 1px ridge black;
+    margin: 2px;
+    padding: 3px;
+}
+
+.toggletable, .toggletable td
+{
+    border: 1px ridge black;
+}
+
+.translatetable, .translatetable th, .translatetable td, .filetypestable td
+{
+    border: 1px ridge black;
+}
+
+.metawordstable
+{
+   width:100%;
+}
+.metawordstable, .metawordstable th, .metawordstable td
+{
+    border: 1px ridge black;
+}
+.metawordstable th
+{
+    text-align: center;
+    padding: .04in;
+}
+.metawordstable td.input-word
+{
+    width: 1.5in;
+}
+.metawordstable td.input-word input
+{
+    width: 1.3in;
+    margin:.05in;
+}
+.metawordstable td.input-url
+{
+    margin:.03in;
+    width: 100%;
+}
+.metawordstable td.input-url input
+{
+    margin:.05in;
+    width: 97%;
+}
+
+.indexingplugintable
+{
+   width:100%;
+}
+.indexingplugintable, .indexingplugintable th, .indexingplugintable td
+{
+    border: 1px ridge black;
+    text-align: center;
+}
+.indexingplugintable th
+{
+    padding: .04in;
+}
+
+.indexingplugintable td.check
+{
+    text-align: center;
+    width: 75%;
+    padding: .1in;
+}
+
+
+#query-statistics
+{
+    margin-top: .4in;
+    border-top: 2px solid gray;
+    color: gray;
+}
+
+.mobile #query-statistics
+{
+    position:relative;
+    top:200px;
+}
+
+.query
+{
+    margin: .1in;
+    border: 1px solid gray;
+    padding: .05in;
+}
+
+.nametable
+{
+    padding: 5px;
+}
+
+.narrowfield
+{
+    width:2in;
+}
+
+.mobile .narrowfield
+{
+    width:100px;
+}
+
+.widefield
+{
+    width:3in;
+}
+
+.mobile .widefield
+{
+    width:150px;
+}
+
+.extrawidefield
+{
+    width:5in;
+}
+
+.mobile .extrawidefield
+{
+    width:200px;
+}
+
+.talltextarea
+{
+    font-size:16pt;
+    width:100%;
+    height:4in;
+}
+
+.mobile .talltextarea
+{
+    width:90%;
+}
+
+.shorttextarea
+{
+    width:100%;
+    height:1in;
+}
+
+.mobile .shorttextarea
+{
+    width:90%;
+}
+
+.center
+{
+    text-align:center;
+}
+
+.topmargin
+{
+    margin-top: .2in;
+}
+
+.nomargin
+{
+    margin: 0;
+}
+
+.box
+{
+    border: 1px ridge #ccc;
+    padding: 3px;
+}
+
+.feed-box
+{
+	right:300px;
+	margin-right:2.2in;
+	margin-top:50px;
+	width:350px;
+	height:450px;
+	border:0px ridge #ccc;
+	float:right;
+	overflow:auto;
+	display: block;
+}
+
+.landing .feed-box
+{
+	right:0px;
+	margin-right:2in;
+	width:0px;
+	height:0px;
+	border:0px ridge #ccc;
+	float:right;
+	overflow:auto;
+	display: block;
+}
+
+.feed-box-header
+{
+	position:absolute;
+	right:0in;
+	margin-right:2.2in;
+	margin-bottom:30px;
+	float:right;
+	color: green;
+	display:block;
+}
+
+.feed-box-image
+{
+	width:50px;
+}
+
+.feed-box-image img
+{
+    height:50px;
+    width:50px;	
+}
+
+.feed-box-feed
+{
+    margin-top:-40;
+    margin-left:60;
+    width:250px;
+}
+
+.landing .feed-box-header
+{
+	
+	text-indent: -3000px;
+}
+
+.slightpad
+{
+    padding: .1in;
+}
+
+fieldset
+{
+    border-color:black;
+}
+
+#restrict-sites-by-url
+{
+    width:.25in; 
+    height:.25in;
+}

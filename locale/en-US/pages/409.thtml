@@ -1,0 +1,5 @@
+title=Conflict
+description=Your request would result in an edit conflict.
+END_HEAD_VARS
+<h2>Your request would result in an edit conflict, so will not be processed.
+</h2>

@@ -1,0 +1,6 @@
+title=Blog
+description=Describes what crawls this search site has performed and what occurred during those crawls
+END_HEAD_VARS
+<h2>Crawl Notes</h2>
+<p>This was an especially interesting crawl...
+</p>
